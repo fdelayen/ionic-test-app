@@ -1,0 +1,23 @@
+<ion-header>
+  <tetra-navbar>{{client.nom}}</tetra-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <div *ngIf="visites.length > 0">
+      <button ion-item *ngFor="let visite of visites" (click)="openRapport(visite)">
+        <h2>{{visite.nom}}</h2>
+        <p>{{visite.dateFormat}}</p>
+      </button>
+    </div>
+    <ion-item *ngIf="visites.length == 0">
+      <h2>Aucune visite à afficher</h2>
+      <h3>Test !</h3>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+<!-- FAB -->
+<button fab fab-right fab-bottom (click)="add()" class="right-25">
+  <ion-icon name="add"></ion-icon>
+</button>

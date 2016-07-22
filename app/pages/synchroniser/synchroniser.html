@@ -1,0 +1,19 @@
+<ion-header>
+  <tetra-navbar>Synchroniser</tetra-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-content style="text-align:center;">
+      <div *ngIf="!running">
+        <p><b>Dernière synchronisation :</b></p>
+        <p *ngIf="status != ''"><b>État :</b> {{status}}</p>
+      </div>
+      <div *ngIf="running">
+        <p><b>Syncronisation en cours...</b></p>
+        <p>{{status}}</p>
+      </div>
+      <button (click)="synchroniser()" [disabled]="running">Synchroniser maintenant</button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

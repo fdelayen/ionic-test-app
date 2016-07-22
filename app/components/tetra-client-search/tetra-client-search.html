@@ -1,0 +1,21 @@
+<ion-content>
+  <ion-list *ngIf="clients.length > 0" style="margin-top:110px;" [virtualScroll]="clients">
+    <div *virtualItem="let client" style="width:100%;">
+      <ion-item-divider *ngIf="client.divider" light>{{client.divider}}</ion-item-divider>
+      <button *ngIf="!client.divider" ion-item (click)="itemTapped($event, client)">
+        <div item-left>
+          <ion-avatar *ngIf="client.icon">
+            <img src="{{client.icon}}">
+          </ion-avatar>
+          <ion-icon *ngIf="!client.icon" name="person"></ion-icon>
+        </div>
+        <h2>{{client.nom}}</h2>
+      </button>
+    </div>
+  </ion-list>
+  <ion-list *ngIf="clients.length == 0" style="margin-top:110px;">
+    <ion-item style="text-align:center;">
+      Aucun partenaire à afficher
+    </ion-item>
+  </ion-list>
+</ion-content>

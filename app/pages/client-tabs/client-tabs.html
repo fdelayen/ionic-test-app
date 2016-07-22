@@ -1,0 +1,19 @@
+<!--ion-header>
+  <tetra-navbar>{{client.nom}} <span *ngIf="client.reference">- {{client.reference}}</span></tetra-navbar>
+</ion-header-->
+<ion-tabs>
+  <ion-tab *ngFor="let t of tabs" tabIcon="{{t.icon}}" [root]="t.component" [rootParams]="params"></ion-tab>
+</ion-tabs>
+<!--ion-content>
+  <ion-row responsive-md>
+    <ion-col width-75>
+      <ion-tabs id="client-tabs">
+        <ion-tab *ngFor="let t of tabs" tabIcon="{{t.icon}}" [root]="t.component" [rootParams]="params"></ion-tab>
+      </ion-tabs>
+    </ion-col>
+    <ion-col hide-md id="client-tabs-search">
+      <tetra-client-search (selected)="selected($event)"></tetra-client-search>
+    </ion-col>
+
+  </ion-row>
+</ion-content-->

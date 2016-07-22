@@ -1,0 +1,48 @@
+{
+  "version": "v4",
+  "repo": "borisyankov/DefinitelyTyped",
+  "ref": "master",
+  "path": "typings",
+  "bundle": "typings/tsd.d.ts",
+  "installed": {
+    "lodash/lodash.d.ts": {
+      "commit": "2f47c75835b837777a85287611703d683b0aaa83"
+    },
+    "googlemaps/google.maps.d.ts": {
+      "commit": "926711691d213f76a483b36dd728e80be1257717"
+    },
+    "markerclustererplus/markerclustererplus.d.ts": {
+      "commit": "2f47c75835b837777a85287611703d683b0aaa83"
+    },
+    "moment/moment.d.ts": {
+      "commit": "926711691d213f76a483b36dd728e80be1257717"
+    },
+    "moment/moment-node.d.ts": {
+      "commit": "926711691d213f76a483b36dd728e80be1257717"
+    },
+    "angularjs/angular.d.ts": {
+      "commit": "a44529fcb1e1cdc0355e71c42a6048de99b57c34"
+    },
+    "jquery/jquery.d.ts": {
+      "commit": "a44529fcb1e1cdc0355e71c42a6048de99b57c34"
+    },
+    "cordova/plugins/FileTransfer.d.ts": {
+      "commit": "a44529fcb1e1cdc0355e71c42a6048de99b57c34"
+    },
+    "cordova/plugins/FileSystem.d.ts": {
+      "commit": "a44529fcb1e1cdc0355e71c42a6048de99b57c34"
+    },
+    "node-uuid/node-uuid.d.ts": {
+      "commit": "a44529fcb1e1cdc0355e71c42a6048de99b57c34"
+    },
+    "node-uuid/node-uuid-cjs.d.ts": {
+      "commit": "a44529fcb1e1cdc0355e71c42a6048de99b57c34"
+    },
+    "node-uuid/node-uuid-base.d.ts": {
+      "commit": "a44529fcb1e1cdc0355e71c42a6048de99b57c34"
+    },
+    "node/node.d.ts": {
+      "commit": "a44529fcb1e1cdc0355e71c42a6048de99b57c34"
+    }
+  }
+}

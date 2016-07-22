@@ -1,0 +1,25 @@
+@import "../../theme/responsive";
+
+@media (min-width: $responsive-md) {
+  #client-tabs {
+    width:75%;
+  }
+
+  #client-tabs .right-25 {
+    right:27%;
+  }
+
+  #client-tabs .left-20 {
+    left:25px;
+  }
+}
+
+#client-tabs-search {
+  background-color:white;
+  position:absolute;
+  height:100%;
+}
+
+#client-tabs .left-20 {
+  left:20px;
+}

@@ -1,0 +1,45 @@
+// http://ionicframework.com/docs/v2/theming/
+
+
+// App Shared Imports
+// --------------------------------------------------
+// These are the imports which make up the design of this app.
+// By default each design mode includes these shared imports.
+// App Shared Sass variables belong in app.variables.scss.
+
+@import "responsive";
+@import "button-fab";
+@import "../pages/client/client";
+@import "../pages/client-tabs/client-tabs";
+@import "../pages/document/document";
+@import "../pages/map/map";
+@import "../pages/actualite/actualite";
+@import "../pages/sondage/sondage";
+@import "../pages/about/about";
+@import "../pages/deconnexion/deconnexion";
+@import "../pages/client-detail-informations/client-detail-informations";
+@import "../pages/rapport-reponse/rapport-reponse";
+@import "../pages/client-tabs/client-tabs";
+@import "../pages/signature/signature";
+
+.toolbar-background {
+  background-color:map-get($colors, primary);
+}
+
+.toolbar * {
+  color:map-get($colors, light);
+}
+
+#client-tabs-search {
+  margin-top: -5px;
+}
+
+// Éviter que les h2 et p dans les buttons empêchent le trigger de l'animation
+button h2, button p { pointer-events: none; }
+
+/* A RETIRER EN BETA.5
+ion-label[stacked], ion-label[floating] {
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+}*/

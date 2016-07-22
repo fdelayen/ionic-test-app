@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-navbar>
+    <button menuToggle="left">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      {{rapport.nom}}
+    </ion-title>
+    <ion-buttons end>
+      <button (click)="valider()">
+        <ion-icon name="checkmark"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let q of rapport.questions">
+    <ion-card-header>
+      {{q.sequence}}) {{q.nom}}
+    </ion-card-header>
+    <ion-card-content>
+      <!-- Number -->
+      <div *ngIf="q.type=='number'">
+        <ion-item>
+          <ion-label floating>Réponse</ion-label>
+          <ion-input type="number" [(ngModel)]="reponses[q.id]" [disabled]="reponses.fige"></ion-input>
+        </ion-item>
+      </div>
+      <!-- String -->
+      <div *ngIf="q.type=='string'">
+        <ion-item>
+          <ion-label floating>Réponse</ion-label>
+          <ion-input type="text" [(ngModel)]="reponses[q.id]" autocorrect="on" autocomplete="on" [disabled]="reponses.fige"></ion-input>
+        </ion-item>
+      </div>
+      <!-- Text -->
+      <div *ngIf="q.type=='text'">
+        <ion-item>
+          <ion-label floating>Réponse</ion-label>
+          <ion-textarea [(ngModel)]="reponses[q.id]" autocorrect="on" autocomplete="on" [disabled]="reponses.fige"></ion-textarea>
+        </ion-item>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+<button *ngIf="rapport.type=='Rapport' && reponses.id" fab fab-right fab-bottom (click)="remove()">
+  <ion-icon name="trash"></ion-icon>
+</button>

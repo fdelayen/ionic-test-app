@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-navbar>
+    <button menuToggle="left">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      <div *ngIf="modifier">
+        <div *ngIf="item.id">
+          Modifier le rappel
+        </div>
+        <div *ngIf="!item.id">
+          Nouveau rappel
+        </div>
+      </div>
+      <div *ngIf="!modifier">
+        Rappel
+      </div>
+    </ion-title>
+    <ion-buttons end>
+      <button *ngIf="modifier" (click)="save()">
+        <ion-icon name="checkmark"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div>
+    <ion-list *ngIf="modifier">
+      <ion-item>
+        <ion-label floating>Titre</ion-label>
+        <ion-input [(ngModel)]="item.titre" type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Description</ion-label>
+        <ion-textarea [(ngModel)]="item.description" ></ion-textarea>
+      </ion-item>
+      <ion-item>
+        <button clear item-left (click)="selectDateRappel()">
+          {{moment(item.date).format("dddd D MMMM YYYY")}}
+        </button>
+        <h2></h2>
+        <p></p>
+        <button clear item-right (click)="selectHeureRappel()">
+          {{moment(item.date).format("LT")}}
+        </button>
+      </ion-item>
+    </ion-list>
+    <ion-card *ngIf="!modifier">
+      <ion-item>
+        <h2>{{item.titre}}</h2>
+        <p>{{item.dateFormat}}</p>
+      </ion-item>
+      <ion-card-content>
+        {{item.description}}
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
+<!-- FAB -->
+<button *ngIf="item.id && modifier" fab fab-right fab-bottom (click)="remove()" class="right-25">
+  <ion-icon name="trash"></ion-icon>
+</button>

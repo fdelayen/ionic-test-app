@@ -1,0 +1,21 @@
+<ion-header>
+  <tetra-navbar>Actualités</tetra-navbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card *ngIf="actualites.length == 0">
+    <ion-item>
+      <h2>Aucune actualité à afficher</h2>
+    </ion-item>
+  </ion-card>
+
+  <ion-card *ngFor="let actualite of actualites">
+    <ion-item>
+      <h2>{{actualite.titre}}</h2>
+      <p>{{actualite.date}}</p>
+    </ion-item>
+    <ion-card-content [innerHTML]="actualite.contenu">
+    </ion-card-content>
+  </ion-card>
+</ion-content>

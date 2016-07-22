@@ -1,0 +1,11 @@
+<ion-navbar class="fix-ios-navbar">
+  <button menuToggle="left">
+    <ion-icon name="menu"></ion-icon>
+  </button>
+  <ion-title class="fix-ios-title-navbar"><ng-content></ng-content></ion-title>
+  <ion-buttons end [ngStyle]="buttonStyle">
+    <button (click)="openNotifs()">
+      <ion-icon name="notifications"></ion-icon>
+    </button>
+  </ion-buttons>
+</ion-navbar>

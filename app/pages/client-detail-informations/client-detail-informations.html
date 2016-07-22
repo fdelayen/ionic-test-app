@@ -1,0 +1,56 @@
+<ion-header>
+  <tetra-navbar>{{client.nom}}</tetra-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-item>
+      <div item-left>
+        <ion-icon name="person"></ion-icon>
+      </div>
+      <h2><b>{{client.nom}}</b></h2>
+    </ion-item>
+
+    <ion-card-content>
+      Test
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      Coordonnées
+    </ion-card-header>
+
+    <ion-card-content>
+      <div class="form-detail">
+        <h2>Téléphone :</h2>
+        <span></span>
+      </div>
+      <div class="form-detail">
+        <h2>Fax :</h2>
+        <span></span>
+      </div>
+      <div class="form-detail">
+        <h2>Site :</h2>
+        <span></span>
+      </div>
+      <div class="form-detail">
+        <h2>Email :</h2>
+        <span></span>
+      </div>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      Divers
+    </ion-card-header>
+
+    <ion-card-content>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
+
+<!-- FAB -->
+<button fab fab-right fab-bottom (click)="openContacts()" class="right-25">
+  <ion-icon name="people"></ion-icon>
+</button>

@@ -1,0 +1,16 @@
+$responsive-sm:        567px !default;  // smaller than landscape phone
+$responsive-md:        767px !default;  // smaller than portrait tablet
+$responsive-lg:        1023px !default; // smaller than landscape tablet
+
+@mixin responsive-hide($selector, $max-width) {
+  @media (max-width: $max-width) {
+    #{$selector} {
+      display:none;
+    }
+  }
+}
+
+/* Add hide-X to hide a block on a device */
+@include responsive-hide('[hide-sm]', $responsive-sm);
+@include responsive-hide('[hide-md]', $responsive-md);
+@include responsive-hide('[hide-lg]', $responsive-lg);

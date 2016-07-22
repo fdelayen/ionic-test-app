@@ -1,0 +1,24 @@
+<div *ngFor="let v of value; let i = index">
+  <ion-item>
+    <ion-label>Heure :</ion-label>
+    <ion-datetime displayFormat="HH:mm" min="2016-01-01" max="2016-02-02" cancelText="Annuler" doneText="Ok" [(ngModel)]="v.time" (ionChange)="inputChanged()" [disabled]="disabled">
+    </ion-datetime>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>Rapport :</ion-label>
+    <ion-textarea [(ngModel)]="v.event" (ionChange)="inputChanged()" [disabled]="disabled">
+    </ion-textarea>
+  </ion-item>
+  <ion-item>
+    <button item-right danger (click)="removeItem(i)" [disabled]="disabled">
+      <ion-icon name="trash"></ion-icon>
+      Supprimer la ligne
+    </button>
+  </ion-item>
+</div>
+<ion-item style="text-align:center">
+  <button (click)="addItem()" [disabled]="disabled">
+    <ion-icon name="add"></ion-icon>
+    Ajouter
+  </button>
+</ion-item>

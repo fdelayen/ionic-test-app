@@ -1,0 +1,26 @@
+<ion-header>
+  <tetra-navbar>Contacts</tetra-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngIf="contacts.length == 0">
+      <h2>Aucun contact à afficher</h2>
+    </ion-item>
+    <div *ngFor="let contact of contacts">
+      <ion-item-divider *ngIf="contact.divider">{{contact.divider}}</ion-item-divider>
+      <ion-item *ngIf="!contact.divider">
+        <div item-left>
+          <ion-icon name="person"></ion-icon>
+        </div>
+        <h2>{{contact.nom}}</h2>
+        <p>0605040302</p>
+        <a [href]="'tel:0605040302'" item-right>
+          <button style="width:36px;height:36px;">
+            <ion-icon name="call"></ion-icon>
+          </button>
+        </a>
+      </ion-item>
+    </div>
+  </ion-list>
+</ion-content>

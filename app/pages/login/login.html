@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-navbar hideBackButton>
+    <ion-title>Suivi commercial</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="has-header" *ngIf="needLogin">
+  <ion-list>
+    <ion-item>
+      <ion-label floating>Code société</ion-label>
+      <ion-input type="text" [(ngModel)]="user.codeSociete" autocomplete="off" autocorrect="off" autocapitalize="off"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Utilisateur</ion-label>
+      <ion-input type="text" [(ngModel)]="user.username" autocomplete="off" autocorrect="off" autocapitalize="off"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Mot de passe</ion-label>
+      <ion-input type="password" [(ngModel)]="user.password"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <div padding style="text-align:center;">
+    <button primary (click)="login()" [disabled]="loading">Sign In</button>
+  </div>
+</ion-content>

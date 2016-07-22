@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar>
+    <button menuToggle="left">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Type de rapport
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div>
+    <ion-list radio-group [(ngModel)]="type">
+      <ion-item *ngFor="let t of types">
+        <ion-label>{{t.nom}}</ion-label>
+        <ion-radio value="{{t.id}}"></ion-radio>
+      </ion-item>
+    </ion-list>
+  </div>
+  <div style="text-align:center;">
+    <button (click)="Annuler()" danger>
+      Annuler
+    </button>
+    <button (click)="Creer()" [disabled]="!type">
+      Créer
+    </button>
+  </div>
+</ion-content>

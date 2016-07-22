@@ -1,0 +1,22 @@
+<ion-header>
+  <tetra-navbar>{{client.nom}}</tetra-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <button ion-item *ngFor="let rappel of rappels" (click)="openRappel(rappel)">
+      <h2>{{rappel.title}}</h2>
+      <h3>{{rappel.dateFormat}}</h3>
+      <p>{{rappel.text}}</p>
+    </button>
+    <ion-item *ngIf="rappels.length == 0">
+      <h2>Aucun rappel à afficher</h2>
+      <h3>Soyez notifié avant vos rendez-vous partenaire !</h3>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+<!-- FAB -->
+<button fab fab-right fab-bottom (click)="add()" class="right-25">
+  <ion-icon name="add"></ion-icon>
+</button>
