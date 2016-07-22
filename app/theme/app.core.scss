@@ -11,16 +11,12 @@
 @import "button-fab";
 @import "../pages/client/client";
 @import "../pages/client-tabs/client-tabs";
-@import "../pages/document/document";
-@import "../pages/map/map";
 @import "../pages/actualite/actualite";
-@import "../pages/sondage/sondage";
 @import "../pages/about/about";
 @import "../pages/deconnexion/deconnexion";
 @import "../pages/client-detail-informations/client-detail-informations";
 @import "../pages/rapport-reponse/rapport-reponse";
 @import "../pages/client-tabs/client-tabs";
-@import "../pages/signature/signature";
 
 .toolbar-background {
   background-color:map-get($colors, primary);
